@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+body {
+  background-color: #fff;
+}
+
+
+body {
+overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(3rem, 1fr));
+  grid-template-rows: repeat(6, minmax(2rem, 1fr));
+  grid-auto-rows: 1fr;
+  z-index: 3;
+  height: 100%;
+  grid-template-areas: "blank1 blank2 blank3 blank4 blank5 blank6 blank7"
+                       "blank8 blank9 blank10 blank11 blank12 blank13 blank14"
+                       "blank15 blank16 blank17 blank18 blank19 blank20 blank21"
+                       "blank22 blank23 blank24 blank25 blank26 blank27 blank28"
+                       "blank29 blank30 blank31 blank32 blank33 blank32 blank35"
+}
+
+.grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 0%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+
+.grid > * {
+
+  background: rgba(0,0,0,0.1);
+  border: 1px white solid;
+  z-index: 3;
+  height: 100%;
+
+
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content h1 {
+  color: #fff;
+  margin-top: 15%;
+  text-align: center;
+  font-weight: 900;
+
+}
+
+.content h2 {
+  color: #fff;
+  margin-top: 10%;
+  text-align: center;
+  margin-bottom: 25%;
+  font-weight: 400;
+
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+
+
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 0em;
+  padding-right: 0em;
+  width: 100%;
+  top: 0%;
+  left: 50%;
+  opacity: 0;
+
+}
+
+.content:hover .content-details{
+  top: 34%;
+  left: 0%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 1.0em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+
+
+
+
+
+.fishhero {
+  padding: 100px 30px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.image-stack {
+  display: grid;
+  position: relative; // imperative for the overlapping to work
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  margin-top: 400px;
+  margin-left: -300px;
+}
+
+.image-stack__item--top {
+  grid-row: 1;
+  margin-left: 0px;
+  max-width: 65%;
+  grid-column: 1 / span 8;
+  padding-top: 25%; // slightly arbitrary, keeps proportion once resized
+  z-index: 1; // tells the browser to make this image on top
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.fishname {
+  position: absolute;
+  font-size: 6vw !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-bottom: 30px;
+  -webkit-text-stroke-width: 2px !important;
+}
+
+
+
+.fishname h2 {
+  color: #000;
+  font-size: 7vw;
+  line-height: 1.3em;
+  letter-spacing: 2px;
+  font-family: "Playfair Display", serif;
+  padding-left: 212%;
+  padding-top: 10%;
+}
+
+.fishname h2 span {
+  color: transparent;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.instagramz {
+  padding: 25px;
+  margin: 10%;
+}
+
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(3rem, 1fr));
+  grid-template-rows: repeat(3, minmax(2rem, 1fr));
+  grid-auto-rows: 2fr;
+  z-index: 3;
+  height: 100%;
+  grid-template-areas: "blank1 blank2 blank3"
+  margin: 0;
+}
+
+.grid2::before {
+  content: '';
+  width: 0;
+  padding-bottom: 0%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.grid2 > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+
+.grid2 > * {
+
+  background: rgba(0,0,0,0.1);
+  border: 75px white solid;
+  z-index: 3;
+  height: 75%;
+
+
+}
+
+.content_title {
+
+text-align: center;
+font-size: 5vh;
+
+}
